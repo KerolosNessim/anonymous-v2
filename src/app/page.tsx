@@ -15,6 +15,7 @@ export default function Home() {
       <PlansSection />
       <BlogsSection />
       <Banner />
+      {/* add comment to test git and node js  */}
     </main>
   );
 }
