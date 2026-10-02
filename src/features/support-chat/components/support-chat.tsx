@@ -6,7 +6,7 @@ import { MessageCircleIcon, XIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { chatThemeClass } from "../constants/chat-config";
+import { appThemeScope } from "@/features/shared/constants/theme-scope";
 import { useSupportChat } from "../hooks/use-support-chat";
 import ChatPanel from "./chat-panel";
 
@@ -67,7 +67,7 @@ export default function SupportChat() {
           "h-[min(34rem,calc(100dvh-11rem))] w-[min(24rem,calc(100vw-2rem))] gap-0 overflow-hidden rounded-2xl border border-border p-0 shadow-xl shadow-custom-primary/10 ring-0",
           // Radix sets data-state, so the open and close animation is wired here, growing out of the launcher
           "origin-bottom-right data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-90 data-[state=open]:slide-in-from-bottom-6 data-[state=open]:duration-300 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:duration-200 motion-reduce:animate-none",
-          chatThemeClass
+          appThemeScope
         )}
       >
         <ChatPanel {...chat} />
