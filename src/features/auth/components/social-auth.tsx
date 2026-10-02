@@ -22,7 +22,7 @@ export default function SocialAuth() {
     try {
       const result = await signInWithProvider(provider);
       if (!result.ok) throw new Error(result.message);
-      router.push("/");
+      router.push("/dashboard");
       router.refresh();
     } catch {
       setError("We couldn't sign you in with that provider. Try again or use your email.");

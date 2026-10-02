@@ -11,8 +11,8 @@ import { Field, FieldError, FieldGroup } from "@/components/ui/field";
 import { register } from "../services/auth-service";
 import { registerSchema, type RegisterValues } from "../types";
 import { errorClass } from "@/features/shared/constants/form-styles";
-import ExperienceField from "./experience-field";
-import PhoneField from "./phone-field";
+import ExperienceField from "@/features/shared/components/experience-field";
+import PhoneField from "@/features/shared/components/phone-field";
 import SocialAuth from "./social-auth";
 import TextField from "@/features/shared/components/text-field";
 
@@ -62,12 +62,12 @@ export default function RegisterForm() {
             <TextField control={form.control} name="lastName" label="Last name" autoComplete="family-name" placeholder="Enter your last name" />
           </div>
           <TextField control={form.control} name="email" label="Email" type="email" autoComplete="email" placeholder="Enter your email" />
-          <PhoneField control={form.control} />
+          <PhoneField control={form.control} name="phone" />
           <div className="grid gap-4 sm:grid-cols-2">
             <TextField control={form.control} name="company" label="Company" autoComplete="organization" placeholder="Enter your company" />
             <TextField control={form.control} name="jobTitle" label="Job title" autoComplete="organization-title" placeholder="Enter your job title" />
           </div>
-          <ExperienceField control={form.control} />
+          <ExperienceField control={form.control} name="experience" />
           <TextField
             control={form.control}
             name="password"

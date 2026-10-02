@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { DownloadIcon, InfoIcon, RefreshCwIcon, UploadIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
+import { downloadJson } from "@/features/shared/utils/download";
 import { primaryActionClass, secondaryActionClass } from "../constants/analysis-config";
 import type { AnalysisResult } from "../types";
 import EntropyTab from "./entropy-tab";
@@ -27,15 +28,7 @@ const tabs = [
   { value: "plots", label: "Plots" },
 ] as const;
 
-function downloadReport(result: AnalysisResult) {
-  const blob = new Blob([JSON.stringify(result, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `anonymous-report-${result.id}.json`;
-  link.click();
-  URL.revokeObjectURL(url);
-}
+const downloadReport = (result: AnalysisResult) => downloadJson(`anonymous-report-${result.id}.json`, result);
 
 const fade = { initial: { opacity: 0, y: 12 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.3 } };
 

@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { FileSearchIcon, FileIcon, XIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { formatBytes } from "../utils/format";
+import { formatBytes } from "@/features/shared/utils/format";
 
 interface DropzoneProps {
   accept?: string;

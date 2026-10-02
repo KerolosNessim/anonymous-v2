@@ -31,10 +31,7 @@ export default function SupportChat() {
         transition={{ type: "spring", stiffness: 260, damping: 18, delay: 1 }}
         className="fixed right-4 bottom-4 z-40 sm:right-6 sm:bottom-6"
       >
-        {/* a soft pulse invites the first click, and stops once the chat has been opened */}
-        {!seen && (
-          <span aria-hidden className="absolute inset-0 rounded-full bg-custom-primary/40 motion-safe:animate-ping" />
-        )}
+
         <PopoverTrigger asChild>
           <Button
             aria-label={open ? "Close support chat" : "Open support chat"}

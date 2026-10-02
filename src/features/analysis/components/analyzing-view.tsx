@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 import { cn } from "@/lib/utils";
 import { analysisSteps, secondaryActionClass } from "../constants/analysis-config";
-import { formatBytes } from "../utils/format";
+import { formatBytes } from "@/features/shared/utils/format";
 
 interface AnalyzingViewProps {
   file: File;

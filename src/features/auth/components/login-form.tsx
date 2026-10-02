@@ -29,7 +29,7 @@ export default function LoginForm() {
         setSubmitError(result.message);
         return;
       }
-      router.push("/");
+      router.push("/dashboard");
       router.refresh();
     } catch {
       setSubmitError("We couldn't log you in. Check your connection and try again.");

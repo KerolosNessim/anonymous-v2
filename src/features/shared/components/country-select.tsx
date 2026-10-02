@@ -7,7 +7,7 @@ import flags from "react-phone-number-input/flags";
 import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { dropdownClass, dropdownItemClass, fieldClass } from "@/features/shared/constants/form-styles";
+import { dropdownClass, dropdownItemClass, fieldClass } from "../constants/form-styles";
 
 interface CountryOption {
   value?: Country;

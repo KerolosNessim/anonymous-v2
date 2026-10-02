@@ -1,6 +1,6 @@
 import type { Identification } from "../types";
-import { formatBytes } from "../utils/format";
-import CopyButton from "./copy-button";
+import { formatBytes } from "@/features/shared/utils/format";
+import CopyButton from "@/features/shared/components/copy-button";
 
 export default function IdentificationTab({ identification }: { identification: Identification }) {
   const rows: { label: string; value: string; mono?: boolean; copy?: boolean }[] = [

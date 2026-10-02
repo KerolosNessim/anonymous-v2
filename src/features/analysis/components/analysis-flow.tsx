@@ -17,11 +17,12 @@ const stage = {
 } as const;
 
 /** The whole analysis flow on one page: upload, analyzing, then the result. */
-export default function AnalysisFlow() {
+/** `embedded` drops the page padding, for use inside the dashboard layout. */
+export default function AnalysisFlow({ embedded = false }: { embedded?: boolean }) {
   const { phase, file, step, result, error, start, reset, reanalyze } = useAnalysis();
 
   return (
-    <section aria-label="File analysis" className="container pt-32 pb-16 md:pb-24 lg:pt-40">
+    <section aria-label="File analysis" className={embedded ? "pb-8" : "container pt-32 pb-16 md:pb-24 lg:pt-40"}>
       <div className="mx-auto max-w-5xl">
         <AnimatePresence mode="wait">
           {phase === "idle" && (

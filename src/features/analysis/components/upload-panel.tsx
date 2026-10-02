@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { MAX_FILE_SIZE, primaryActionClass, uploadTabs } from "../constants/analysis-config";
 import type { AnalysisKind } from "../types";
-import { formatBytes } from "../utils/format";
+import { formatBytes } from "@/features/shared/utils/format";
 import Dropzone from "./dropzone";
 import PillTabs from "./pill-tabs";
 

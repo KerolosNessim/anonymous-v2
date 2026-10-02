@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import type { StringsResult } from "../types";
-import { formatBytes } from "../utils/format";
+import { formatBytes } from "@/features/shared/utils/format";
 
 function Group({ title, items, accent }: { title: string; items: string[]; accent?: boolean }) {
   if (items.length === 0) return null;

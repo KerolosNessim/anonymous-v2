@@ -6,7 +6,7 @@ import { ShieldAlertIcon, ShieldCheckIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import type { AnalysisResult } from "../types";
-import { formatDateTime } from "../utils/format";
+import { formatDateTime } from "@/features/shared/utils/format";
 
 const RADIUS = 64;
 

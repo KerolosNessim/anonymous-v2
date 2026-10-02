@@ -1,13 +1,6 @@
 import { z } from "zod";
 import { isValidPhoneNumber } from "react-phone-number-input";
-
-export const experienceOptions = [
-  "Less than 1 year",
-  "1 to 2 years",
-  "3 to 5 years",
-  "6 to 10 years",
-  "More than 10 years",
-] as const;
+import { experienceOptions } from "@/features/shared/constants/experience";
 
 export const loginSchema = z.object({
   email: z.email("Enter a valid email address."),

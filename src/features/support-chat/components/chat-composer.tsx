@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SendIcon } from "lucide-react";
 import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "@/components/ui/input-group";
 
@@ -11,7 +11,13 @@ interface ChatComposerProps {
 
 export default function ChatComposer({ disabled, onSend }: ChatComposerProps) {
   const [value, setValue] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const empty = value.trim().length === 0;
+
+  // after a reply arrives, put the cursor back in the message box if focus was lost (for example after a quick reply)
+  useEffect(() => {
+    if (!disabled && document.activeElement === document.body) inputRef.current?.focus();
+  }, [disabled]);
 
   return (
     <form
@@ -25,6 +31,7 @@ export default function ChatComposer({ disabled, onSend }: ChatComposerProps) {
     >
       <InputGroup className="h-11 rounded-full">
         <InputGroupInput
+          ref={inputRef}
           value={value}
           onChange={(event) => setValue(event.target.value)}
           placeholder="Type your question"
