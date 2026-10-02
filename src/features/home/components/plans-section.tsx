@@ -1,94 +1,13 @@
 import SectionHeader from '@/features/shared/components/section-header'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import PlanCard, { type PlanCardData } from './plan-card';
+import PlanCard from '@/features/shared/components/plan-card';
+import { individualPlans, teamPlans } from "@/features/shared/constants/plans";
 
-const individualPlans: PlanCardData[] = [
-  {
-    name: "Monthly",
-    price: "$19",
-    period: "mo",
-    subtitle: "Best For Beginner",
-    features: [
-      "AI-powered malware scanning",
-      "Basic threat detection",
-      "Limited malware reports",
-      "Community support",
-    ],
-  },
-  {
-    name: "Monthly",
-    price: "$79",
-    period: "mo",
-    subtitle: "Best For Advanced",
-    highlighted: true,
-    features: [
-      "AI-powered malware scanning",
-      "Basic threat detection",
-      "Limited malware reports",
-      "Community support",
-      "Enterprise-scale monitoring",
-      "Advanced reporting",
-    ],
-  },
-  {
-    name: "Monthly",
-    price: "$19",
-    period: "mo",
-    subtitle: "Best For Beginner",
-    features: [
-      "AI-powered malware scanning",
-      "Basic threat detection",
-      "Limited malware reports",
-      "Community support",
-    ],
-  },
-];
 
-const teamPlans: PlanCardData[] = [
-  {
-    name: "Monthly",
-    price: "$49",
-    period: "mo",
-    subtitle: "Small Security Teams",
-    features: [
-      "AI-powered malware scanning",
-      "Priority threat detection",
-      "Shared malware reports",
-      "Team collaboration",
-    ],
-  },
-  {
-    name: "Monthly",
-    price: "$129",
-    period: "mo",
-    subtitle: "Best For SOC Teams",
-    highlighted: true,
-    features: [
-      "AI-powered malware scanning",
-      "Priority threat detection",
-      "Unlimited malware reports",
-      "Team collaboration",
-      "Enterprise-scale monitoring",
-      "Threat intelligence export",
-    ],
-  },
-  {
-    name: "Monthly",
-    price: "$219",
-    period: "mo",
-    subtitle: "Best For Enterprises",
-    features: [
-      "AI-powered malware scanning",
-      "Full threat intelligence suite",
-      "Unlimited malware reports",
-      "Dedicated support",
-    ],
-  },
-];
 
 const PlansSection = () => {
   return (
-    <section className="container py-20 space-y-12">
+    <section id="plans" className="container scroll-mt-28 py-12 md:py-20 space-y-12">
       <SectionHeader
         label="Why Choose Our Plans?"
         title="Built for Scale, Designed for Security."

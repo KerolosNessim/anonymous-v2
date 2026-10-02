@@ -8,18 +8,18 @@ export default function HeroSection() {
   return (
     <section
       className={
-        "min-h-dvh  relative overflow-hidden  flex  flex-col items-center justify-center"
+        "min-h-dvh py-32 relative overflow-hidden  flex  flex-col items-center justify-center"
       }
     >
       {/* header */}
       <TextAnimate
-        delay={1}
+        delay={0.2}
         duration={0.5}
         as="h1"
         animation="blurInUp"
         by="word"
         viewport={{ once: true }}
-        className=" text-5xl lg:text-7xl   font-bold text-center leading-snug max-w-xl"
+        className=" text-4xl sm:text-5xl lg:text-7xl px-4 font-bold text-center leading-snug max-w-xl"
       >
         Malwares Hide, We shine
       </TextAnimate>
@@ -35,9 +35,9 @@ export default function HeroSection() {
         }}
         transition={{
           duration: 1,
-          delay: 1.5,
+          delay: 0.7,
         }}
-        className=" max-w-2xl text-center font-normal text-gray-400 mt-4"
+        className=" max-w-2xl px-4 text-center text-sm sm:text-base font-normal text-gray-400 mt-4"
       >
         Next-generation threat detection powered by artificial intelligence.
         Anonymous scans, analyzes, and neutralizes sophisticated malware that
@@ -56,7 +56,7 @@ export default function HeroSection() {
         }}
         transition={{
           duration: 1,
-          delay: 2,
+          delay: 1,
         }}
         className="flex items-center gap-4 mt-4"
       >

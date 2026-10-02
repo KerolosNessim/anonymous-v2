@@ -46,9 +46,9 @@ export default function SectionHeader({
         viewport={withAnimation ? { once: true } : undefined}
       transition={{
         duration: 0.5,
-        delay: 0.5,
+        delay: 0.1,
       }}
-        className='lg:text-4xl text-2xl font-bold'>{title}</motion.h2>
+        className='text-2xl md:text-3xl lg:text-4xl font-bold'>{title}</motion.h2>
       <motion.p
         initial={withAnimation ? {
           opacity: 0,
@@ -61,9 +61,9 @@ export default function SectionHeader({
         viewport={withAnimation ? { once: true } : undefined}
         transition={{
           duration: 0.5,
-          delay: 0.7,
+          delay: 0.2,
         }}
-        className={cn('text-gray-400 leading-loose', 
+        className={cn('text-gray-400 text-sm sm:text-base leading-relaxed sm:leading-loose', 
           align === 'start' ? 'text-left' :
             align === 'center' ? 'text-center' :
               'text-right',

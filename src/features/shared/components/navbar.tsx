@@ -6,29 +6,9 @@ import { usePathname } from "next/navigation";
 import AuthLinks from "./auth-links";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { navLinks } from "@/features/shared/constants/navigation";
 
-const NavLinks = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "About Us",
-    path: "/about",
-  },
-  {
-    label: "Services",
-    path: "/services",
-  },
-  {
-    label: "Blogs",
-    path: "/blogs",
-  },
-  {
-    label: "Contact Us",
-    path: "/contact",
-  },
-]
+
 export default function Navbar() {
   const pathname = usePathname()
   return (
@@ -62,7 +42,7 @@ export default function Navbar() {
 
       {/* nav links */}
       <ul className=" flex items-center gap-8 max-lg:hidden">
-        {NavLinks.map((link, index) => {
+        {navLinks.map((link, index) => {
           return (
             <li key={index}>
               <Link
@@ -106,7 +86,7 @@ export default function Navbar() {
 
           <div className="flex flex-col items-center gap-6 text-sm text-muted-foreground">
             <ul className=" flex flex-col items-center gap-6">
-              {NavLinks.map((link, index) => {
+              {navLinks.map((link, index) => {
                 return (
                   <li key={index}>
                     <Link

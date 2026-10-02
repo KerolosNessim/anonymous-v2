@@ -176,6 +176,33 @@
   html {
     @apply font-sans;
   }
+
+  /* Scrollbars in the app theme: navy track, cyan thumb. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-dark-blue);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(0 255 224 / 0.8), rgb(0 255 224 / 0.35));
+    border: 2px solid var(--color-dark-blue);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-custom-primary);
+  }
+  ::-webkit-scrollbar-corner {
+    background: var(--color-dark-blue);
+  }
+  /* Chrome ignores the rules above when scrollbar-color is set, so this is only for Firefox. */
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(0 255 224 / 0.6) var(--color-dark-blue);
+    }
+  }
 }
 
 
